@@ -21,6 +21,6 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    Show.where("rating > ?", :rating).flatten
-  end 
+    Show.where("rating > ?", :rating).first
+  end
 end
